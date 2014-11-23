@@ -1,12 +1,15 @@
-$(call inherit-product, device/lge/d855/full_d855.mk)
+$(call inherit-product, vendor/aicp/configs/common.mk)
 
 # Inherit some common CM stuff.
-#$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/aicp/configs/gsm.mk)
 
 # Enhanced NFC
-#$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/aicp/configs/nfc_enhanced.mk)
 
-PRODUCT_NAME := du_d855
+$(call inherit-product, device/lge/d855/full_d855.mk)
+
+
+PRODUCT_NAME := aicp_d855
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g3" \
